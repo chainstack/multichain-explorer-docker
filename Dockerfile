@@ -15,7 +15,8 @@ RUN apk --no-cache add \
     gcc \
     sqlite
 
-ENV EXPLORER_VERSION=4ea79dad1f6d518c0cb5098820e13c6e2b2cdfd9 # 29 Dec 2018
+# 0.8rc0 29 Dec 2018
+ENV EXPLORER_VERSION=4ea79dad1f6d518c0cb5098820e13c6e2b2cdfd9
 
 RUN pip install https://raw.githubusercontent.com/MultiChain/multichain-explorer/${EXPLORER_VERSION}/requirements.txt && \
     pip install https://github.com/MultiChain/multichain-explorer/archive/${EXPLORER_VERSION}.zip
