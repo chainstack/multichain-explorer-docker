@@ -15,11 +15,11 @@ RUN apk --no-cache add \
     gcc \
     sqlite
 
-# Jan 29, 2019
-ENV EXPLORER_VERSION=32e9af2
+# Mar 28, 2019
+ENV EXPLORER_VERSION=9ced7cf
 
-RUN pip install -r https://raw.githubusercontent.com/MultiChain/multichain-explorer/${EXPLORER_VERSION}/requirements.txt && \
-    pip install https://github.com/MultiChain/multichain-explorer/archive/${EXPLORER_VERSION}.zip
+RUN pip install -r https://raw.githubusercontent.com/chainstack/multichain-explorer/${EXPLORER_VERSION}/requirements.txt && \
+    pip install https://github.com/chainstack/multichain-explorer/archive/${EXPLORER_VERSION}.zip
 
 CMD ["/bin/bash", "/app/entrypoint.sh"]
 
